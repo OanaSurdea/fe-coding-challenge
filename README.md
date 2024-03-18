@@ -1,65 +1,41 @@
 # Products | Coding Challenge
 
-Welcome to this little coding challenge.
-Your task is to implement a small set of
-features covering HTML & (S)CSS, JavaScript & Typescript as well as Angular &
-RxJS. Don't worry, there is no perfect solution. Take five minutes to read
-through this README to get you started and know the requirements.
+Welcome to this coding challenge, don't worry, there is no perfect solution.
+Take few minutes to read through this README to get you started and know the requirements.
 
-## General setup
+## Setup description
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The
-application will automatically reload if you change any of the source files.
+You will find a `ProductService` in `/app/features/products/services`
+that you should be using for your implementation. Do not change its implementation.
 
-The project is in a very basic state, only consisting of the `AppComponent` and
-the `AppModule`. Additionally, you will find a `ProductService` in `/products`
-that you should be using for your implementation. You don't need to change its
-implementation though. The `ProductService` exposes a single method `get()`,
-which returns an [RxJS](https://rxjs.dev/) Observable holding a paginated list
-of product entities.
-
-## Your task
-Your task is threefold and involves different areas of our frontend development.
-
-### HTML & CSS
-Implement a card-based layout for the product view. This is not about building
-a pixel-perfect replica of the design we are handing out, but more about getting
-the overall design right. Here are a few requirements / guidelines that you
-should consider while building your solution:
-
-* The card displays all contents of a product:
-  - The product **image** in a 2:1 ratio on the top or a placeholder if it is
-  not available.
-  - The full product **title**.
-  - The product **description**, with a max. of three lines and an ellipsis if
-  it is longer.
-  - The inline list of product **categories**. Categories are always displayed
-  on the bottom of the card.
-* When clicking a card, the product **URL** is opened in a new tab.
-* Cards are aligned on a responsive layout with cards filling the available
-space while always maintaining a minimum width of `16rem`.
-
-Below you can find a screenshot and animation of the final result.
-
-![Cards](./docs/cards.png)
-
-![Responsive Cards](./docs/cards.gif)
+The `ProductService` exposes a single method `get()`, which returns an
+[RxJS](https://rxjs.dev/) Observable holding a paginated list of product entities.
 
 ### RxJS
 
-As of now, the current solution only displays the first page of products. A
-"Read More" button is already in place though. Utilize the power of RxJS to
-implement this button and load the next page (and append it to the content)
-whenever the user clicks it. Give the user feedback while loading data and
-handle errors gracefully.
+As of now, the `App` only displays the one `products` page containing a `products-list`.
 
-### Angular
+A "Load More" button is already in place though. Utilize RxJS to implement the functionality of this button
+by loading the next page of products and append it's contents to the current page products, whenever the user clicks it.
 
-There is no specific Angular task, but we do expect you structure your
-implementation into Angular modules / components / services how you see fit.
+Give the user feedback while loading data and handle errors gracefully.
+
+### Tasks Summary (in order of importance)
+
+1. [] Clicking "Load More" should append more products each time.
+2. [] Display a loading indicator, as needed.
+3. [] Handle `get()` errors
+4. [] CSS: auto arrange the product cards horizondally on bigger screens and keep them vertical on small screens.
+
+### Important Tips
+
+Ideally, the code should be:
+- as reactive as possible.
+- fully unit tested.
 
 ## Submitting your solution
 
-You can simply provide your solution by creating a pull request for this
+- Via github: you can simply provide your solution by creating a pull request for this
 repository.
+
+- Via StackBlitz: save all the files and click the Share button on the left side of the top bar.
