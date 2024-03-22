@@ -1,4 +1,4 @@
-# Products | Coding Challenge
+# Products | A test modification
 
 Welcome to this coding challenge, don't worry, there is no perfect solution.
 Take few minutes to read through this README to get you started and know the requirements.
